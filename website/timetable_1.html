@@ -1,0 +1,76 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+<link rel="shortcut icon" type = "img/jpg" href="ga.jpg">
+<title> Greater Anglia </title>
+
+
+</head>
+
+<body>
+<header>
+<img src = "greaterAnglia.png" align = "top" alt = "Greater Anglia Logo" height = "6%"></img>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+	<a class = "navbar-brand" href ="homepage.html">Home</a>
+	  <li class="nav-item">
+        <a class="nav-link" href="booking_1.html">Let's Get Started!</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="timetable_1.html">Train Timetable</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="delays.html" tabindex="-1">Delays/Issues</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div class = "jumbotron">
+<h1 class = "display-3" align = "middle">Train Timetable: </h1>
+<h3 class = "display-4" align = "middle">Where from? Where to?</h3>
+</div>
+<div align = "middle">
+<div class="form-group col-md-3" align = "middle">
+  <label for="departInput">Going From:</label>
+  <select class = "custom-select mb-1" size = "1" id="departInput">
+    <option value="NW">Norwich</option>
+    <option value="EL">Ely</option>
+    <option value="LL">London Liverpool Street</option>
+    <option value="CB">Cambridge</option>
+    <option value="IW">Ipswich</option>
+  </select>
+</div>
+  
+<div class="form-group col-md-3" align = "middle">
+  <label for="arriveInput">Going To:</label>
+  <select class = "custom-select mb-1" size = "1" id="arriveInput">
+    <option value="EL">Ely</option>
+    <option value="LL">London Liverpool Street</option>
+	<option value="NW">Norwich</option>
+    <option value="CB">Cambridge</option>
+    <option value="IW">Ipswich</option>
+  </select>
+  
+  <a href="timetable_2.html" align><button type="button" value = "submit" class="btn btn-outline-danger">Submit</button>
+</div>
+  
+  
+</div>
+
+
+</body>
+</html>

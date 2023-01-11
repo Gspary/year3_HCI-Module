@@ -1,0 +1,228 @@
+<html>
+<head>
+<!-- Bootstrap files -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+<link rel="shortcut icon" type = "img/jpg" href="../static/img/ga.jpg">
+<title> Greater Anglia </title>
+
+
+</head>
+
+<body>
+<!-- Navigation Bar -->
+<header>
+<img src = "../static/img/greaterAnglia.png" align = "top" alt = "Greater Anglia Logo" height = "6%"></img>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+	<a class = "navbar-brand" href ="homepage">Home</a>
+	  <li class="nav-item active">
+        <a class="nav-link" href="booking_1">Buy a ticket</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="delays" tabindex="-1">Delays/Issues</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class = "jumbotron">
+<h1 class = "display-3" align = "middle">Almost there, just a few more things: </h1>
+<h3 class = "display-4" align = "middle">How many people, and which ticket is best?</h3>
+</div>
+
+<!-- Selecting Choices (Adults/Children) -->
+<div align = "left">
+<div class = "border col-md-1" align = "left">
+<p> Placeholder text for additional options, such as: 1st Class, Railcards, Family, Off/On peak times, etc.</p>
+</div>
+</div>
+
+<div align = "left">
+<div class="form-group col-md-1">
+  <label for="sel1">Adults:</label>
+  <select class="form-control" id="sel1">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+	<option>5</option>
+	<option>6</option>
+	<option>7</option>  
+	<option>8</option>
+	<option>9</option>
+	<option>10</option>
+  </select>
+  </br>
+  
+  <label for="sel2">Children:</label>
+  <select class="form-control" id="sel2">
+	<option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+	<option>5</option>
+	<option>6</option>
+	<option>7</option>  
+	<option>8</option>
+	<option>9</option>
+	<option>10</option>
+  </select>
+</div>
+</div>
+</br>
+<div align = "left">
+  <a class="btn btn-outline-danger" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Help
+  </a>
+
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+   Yellow outline = Peak times, No outline = Off-Peak times
+  </div>
+</div>
+</div>
+
+</br>
+</br>
+
+
+{% if tickType == '1'%}
+
+<!-- Tables of best choices -->
+<h3> Departing: </h3>
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr class = "table-light">
+      <th scope="col">Price (£)</th>
+      <th scope="col">Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for line in tickList [:5] %}
+	
+	{% if line[0] == 'p'%}  
+    <tr class = "table-warning">
+      <th scope="row">{{line[3]}}</th>
+      <td>{{line[1]}}:{{line[2]}} </td>     
+    </tr>
+	{% else %}    
+	<tr class = "table-light">
+      <th scope="row">{{line[3]}}</th>
+      <td>{{line[1]}}:{{line[2]}} </td> 
+    </tr>
+	{% endif %}
+	{% endfor %}
+	
+  </tbody>
+</table>
+
+</div>
+
+</br>
+
+
+{% else %} 
+
+
+
+<h3> Departing: </h3>
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr class = "table-light">
+      <th scope="col">Price (£)</th>
+      <th scope="col">Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for line in tickList [:5]  %}
+	
+	{% if line[0] == 'p'%}  
+    <tr class = "table-warning">
+      <th scope="row">{{line[3]}}</th>
+      <td>{{line[1]}}:{{line[2]}} </td>     
+    </tr>
+	{% else %}    
+	<tr class = "table-light">
+      <th scope="row">{{line[3]}}</th>
+      <td>{{line[1]}}:{{line[2]}} </td> 
+    </tr>
+	{% endif %}
+	{% endfor %}
+   </tbody>
+</table>
+
+<a class="btn btn-outline-danger" data-toggle="collapse" href="#collapseReturn" role="button" aria-expanded="false" aria-controls="collapseReturn"> View return tick info</a>
+
+<div class="collapse" id="collapseReturn" align = "left">
+</br>
+  <h3> Returning: </h3>
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr class = "table-light">
+      <th scope="col">Price (£)</th>
+      <th scope="col">Time</th>
+      <!--<th scope="col">Class</th> -->
+    </tr>
+  </thead>
+  <tbody>
+	{% for fab in tickList2 [:5] %}
+	
+	{% if fab[0] == 'p'%}  
+    <tr class = "table-warning">
+      <th scope="row">{{fab[3]}}</th>
+      <td>{{fab[1]}}:{{fab[2]}} </td>     
+    </tr>
+	{% else %}    
+	<tr class = "table-light">
+      <th scope="row">{{fab[3]}}</th>
+      <td>{{fab[1]}}:{{fab[2]}} </td> 
+    </tr>
+	{% endif %}
+	{% endfor %}
+	
+  </tbody>
+  {% endif %}
+  
+  
+  
+</table>
+
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div align = "right">
+<a href="booking_2"><button type="button" class="btn btn-outline-danger">Back</button>
+<a href="booking_4"><button type="button" class="btn btn-outline-danger">Next</button>
+</div>
+
+</body>
+</html>

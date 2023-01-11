@@ -1,0 +1,93 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap files -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<link href="dist/css/multiple-select.css" rel="stylesheet">
+<script src="dist/js/multiple-select.js"></script>
+<script src = "js/script.js"></script>
+<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+<link rel="shortcut icon" type = "img/jpg" href="../static/img/ga.jpg">
+
+
+
+
+</script>
+
+
+
+<title> Greater Anglia </title>
+
+</head>
+<!-- Navigation Bar -->
+<body>
+<header>
+<img src = "../static/img/greaterAnglia.png" align = "top" alt = "Greater Anglia Logo" height = "6%"></img>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+	<a class = "navbar-brand" href ="homepage">Home</a>
+	  <li class="nav-item active">
+        <a class="nav-link" href="booking_1">Buy a ticket</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="delays" tabindex="-1">Delays/Issues</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<!-- Selecting Choices -->
+<div class = "jumbotron">
+<h1 class = "display-3" align = "middle">Let's get you started: </h1>
+<h3 class = "display-4" align = "middle">Where are you headed?</h3>
+</div>
+
+<div class="form-group" align = "middle" name ="" >
+<form action ="bookStation" method = "post" id="issueForm">
+  <label for="departInput">Departing Station: </label>
+  <select class = "custom-select mb-1" size = "1" name = "station1" id="departInput">
+    <option value="Norwich">Norwich</option>
+    <option value="Ely">Ely</option>
+    <option value="London">London Liverpool Street</option>
+    <option value="Cambridge">Cambridge</option>
+    <option value="Ipswich">Ipswich</option>
+  </select>
+
+  <label for="arriveInput">  Arival Station: </label>
+  <select class = "custom-select mb-1" size = "1" name = "station2" id="arriveInput">
+    <option value="London">London Liverpool Street</option>
+	<option value="Norwich">Norwich</option>
+    <option value="Ely">Ely</option>    
+    <option value="Cambridge">Cambridge</option>
+    <option value="Ipswich">Ipswich</option>
+  </select>
+  
+</div>
+
+
+</div>
+
+</br>
+</br>
+<div align = "right">
+<a href="homepage"><button type="button" value = "remove from file" class="btn btn-outline-danger">Back</button></a>
+<button type = "submit" value = "Add to file" class = "btn btn-outline-danger">Submit</button></a>
+</div>
+</form>
+
+
+
+
+</body>
+</html>

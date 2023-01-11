@@ -1,0 +1,73 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+<link rel="shortcut icon" type = "img/jpg" href="../static/img/ga.jpg">
+<title> Greater Anglia </title>
+
+
+</head>
+
+<body>
+<header>
+<img src = "../static/img/greaterAnglia.png" align = "top" alt = "Greater Anglia Logo" height = "6%"></img>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+	<a class = "navbar-brand" href ="homepage">Home</a>
+	  <li class="nav-item">
+        <a class="nav-link" href="booking_1">Buy a ticket</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="delays" tabindex="-1">Delays/Issues</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class = "jumbotron">
+<h1 class = "display-3" align = "middle">Report a delay: </h1>
+<h3 class = "display-4" align = "middle">Just fill out the details!</h3>
+</div>
+
+
+<div class = "container">
+<form <form action ="addIssue" method = "post" id="issueForm">
+	  <label for="reportStationInput">Station:</label>
+	  <select class = "form-group md-4 mb-3" size = "1" name = "station" id="reportStationInput">
+      <option value="Norwich">Norwich</option>
+      <option value="Ely">Ely</option>
+      <option value="Cambridge">Cambridge</option>
+      <option value="Ipswich">Ipswich</option>
+	  <option value="London">London Liverpool Street</option>
+  </select>
+  
+  </br>
+  
+  <label for = "issue"> Issue: </label>
+   <textarea class="form-control" rows="3" placeholder = "Max 250 characters" name="issueText"  id="issue" maxlength = "250"></textarea>
+
+  </br>
+  
+<!--<a href = "delays_2"> -->
+<button type = "submit" value = "Add to file" class = "btn btn-outline-danger">Submit</button></a>
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

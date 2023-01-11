@@ -1,0 +1,65 @@
+<html>
+<head>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+<link rel="shortcut icon" type = "img/jpg" href="../static/img/ga.jpg">
+<title> Greater Anglia </title>
+
+
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<header>
+<img src = "../static/img/greaterAnglia.png" align = "top" alt = "Greater Anglia Logo" height = "6%"></img>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+	<a class = "navbar-brand" href ="homepage">Home</a>
+	  <li class="nav-item">
+        <a class="nav-link" href="booking_1">Buy a ticket</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="delays" tabindex="-1">Delays/Issues</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="jumbotron">
+  <h1 class = "display-1" align = "middle">Welcome!</h1>
+  <p class = "display-4" align = "middle">To the new Greater Anglia website</p>
+</div>
+
+
+<!-- Selecting Choices (Cards) -->
+<div class="card-deck">
+  <div class="card">
+    <img src="../static/img/train1.jpg" height = "60%" class="card-img-top" alt="Newer Looking train">
+    <div class="card-body">
+      <h5 class="card-title">Buy Tickets</h5>
+      <p class="card-text">Click here to start your journey planning: </br></br> <a href="booking_1"><button type="button" class="btn btn-outline-danger">Click here</button></a></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="../static/img/train2.jpg" height = "60%" class="card-img-top" alt="Train Delays">
+    <div class="card-body">
+      <h5 class="card-title">Delays and Issues</h5>
+      <p class="card-text">See the latest news on any issues that might be affecting your route: </br> </br> <a href="delays"><button type="button" class="btn btn-outline-danger">Click here</button></a></p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+
+</body>
+</html>

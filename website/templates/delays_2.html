@@ -1,0 +1,187 @@
+<html>
+<head>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+<link rel="shortcut icon" type = "img/jpg" href="../static/img/ga.jpg">
+<title> Greater Anglia </title>
+</head>
+
+<body>
+<header>
+<img src = "../static/img/greaterAnglia.png" align = "top" alt = "Greater Anglia Logo" height = "6%"></img>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+	<a class = "navbar-brand" href ="homepage">Home</a>
+	  <li class="nav-item">
+        <a class="nav-link" href="booking_1">Buy a ticket</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="delays" tabindex="-1">Delays/Issues</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class = "jumbotron">
+<h1 class = "display-3" align = "middle">Delays</h1>
+<h3 class = "display-4" align = "middle">See the latest delays here:</h3>
+</div>
+
+
+<div class = "container">
+<form action ="issueFilter2" method = "post" id="issueForm" align = "middle" class = "mx-sm-3 mb-2">
+	  <label for="reportStationInput"  style="font-size:30px;" >Station:</label>
+	  <select class = "custom-select md-5 mb-3 col-3" size = "1" name = "station" id="reportStationInput">
+	  <option value="All">All </option>
+      <option value="Norwich">Norwich</option>
+      <option value="Ely">Ely</option>
+      <option value="Cambridge">Cambridge</option>
+      <option value="Ipswich">Ipswich</option>
+	  <option value="London">London Liverpool Street</option>
+  </select>
+  
+
+  
+<!--<a href = "delays_2"> -->
+<button type = "submit" value = "filter list" class = "btn btn-outline-danger btn-lg">Submit</button></a>
+</form>
+</div>
+
+
+</br>
+</br>
+
+
+<div class = "container">
+	<h1 class = "display-4" align = "middle"><u>Latest posted delays:</u></h1>
+<div class="container">
+<div align = "right">
+<a href = "delay_report"><button type = "button" class = "btn btn-outline-danger btn-lg" align = "right"> Report a delay </button></a>
+
+
+</div>
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1" >
+        
+        <div class="comment-tabs">
+           
+              <div class="row">
+    <div class="col-sm-10 col-sm-offset-1" id="fullList">
+        <div class="page-header">
+                      
+        </div>
+        <div class="issue list">
+            
+				{% for line in aList %}
+                <div class="tab-pane active border border-dark" id="Issue">                
+                    <ul class="media-list">
+                      <li class="media">
+                        <a class="pull-left" href="#">
+                          
+                        </a>
+                        <div class="media-body">
+                          <div class="well well-lg">
+                              <h4 class="media-heading text-uppercase reviews"> {{line[0]}} </h4>
+                              <p class="media-comment">
+                                {{line[1]}}
+                              </p>
+							  <p class="media-comment"><small>Time posted: {{line[2]}}</small></p>
+                              
+                           
+                          </div>              
+                        </div>
+                       
+                      </li>          
+                     
+                      
+                    </ul> 
+                </div>
+                  {% endfor %}              
+            
+        </div>
+    </div>
+  </div>
+ </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

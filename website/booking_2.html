@@ -1,0 +1,116 @@
+<html>
+<head>
+<!-- Bootstrap files -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+<link rel="shortcut icon" type = "img/jpg" href="ga.jpg">
+<title> Greater Anglia </title>
+</head>
+
+<body>
+<!-- Navigation Bar-->
+<header>
+<img src = "greaterAnglia.png" align = "top" alt = "Greater Anglia Logo" height = "6%"></img>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+	<a class = "navbar-brand" href ="homepage.html">Home</a>
+	  <li class="nav-item">
+        <a class="nav-link" href="booking_1.html">Let's Get Started!</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="timetable_1.html">Train Timetable</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="delays.html" tabindex="-1">Delays/Issues</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div class = "jumbotron">
+<h1 class = "display-3" align = "middle">Continue your journey plan: </h1>
+<h3 class = "display-4" align = "middle">What time and date?</h3>
+</div>
+
+
+<!-- Selecting Choices (Single/Return/Season) -->
+<div align = "right">
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-danger active btn-outline-danger">
+    <input type="radio" name="options" id="option1" data-toggle="collapse" href="#collapseReturn" role="button" aria-expanded="false" aria-controls="collapseExample" checked> Single
+  </label>
+  <label class="btn btn-danger btn btn-outline-danger">
+  <input type = "radio" name="options" id="option2" data-toggle="collapse" href="#collapseReturn" role="button" aria-expanded="false" aria-controls="collapseExample" > Return
+  </label>
+  <label class="btn btn-danger btn btn-outline-danger">
+    <input type="radio" name="options" id="option3"> Season
+  </label>
+</div>
+</div>
+
+
+</br>
+</br>
+</br>
+
+
+<!-- Selecting Choices (date and time) -->
+<div align = "left">
+<div class="form-group col-md-3" align = "left">
+ <label>Select Departure Date:</label>
+ <input type="date" name="startDate" max="3000-12-31" 
+        min="2019-12-12" class="form-control">
+</div>
+
+<div class="form-group col-md-3" align = "left">
+ <label>Select Departure Time:</label>
+ <input type="time" name="startTime" min = "00:00" max = "24:00" class="form-control">
+</div>
+
+
+<div class="collapse" id="collapseReturn" align = "middle">
+  <div class="card card-body" align = "middle">
+    <div class="form-group col-md-3" align = "left">
+		<label >Select Return Date:</label>
+		<input type="date" name="returnDate" min="2019-12-12" max="3000-12-31" class="form-control">
+	</div>
+
+	<div class="form-group col-md-3" align = "left">
+		<label>Select Return Time:</label>
+		<input type="time" name="returnTime" min = "00:00" max = "24:00" class="form-control">
+	</div>
+	</div>
+ </div>
+</div>
+
+
+
+
+
+</br>
+</br>
+<div align = "right">
+<a href="booking_1.html"><button type="button" class="btn btn-outline-danger">Back</button>
+<a href="booking_3.html"><button type="button" class="btn btn-outline-danger">Next</button>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
